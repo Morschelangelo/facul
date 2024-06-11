@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- BCC | Desenvolvimento de Software WEB - Terça-Feira -->
+<!-- Vinicius da Cruz Silva, 1528293-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <form id="cadastroForm" method="post" action="recebe_dados.php">
+    <div class="form-group">
+      <label for="paciente">Paciente:</label>
+      <input type="text" id="paciente" name="paciente" maxlength="50" placeholder="Digite o nome do paciente" required>
+    </div>
+    <div class="form-group">
+      <label for="sexo">Sexo:</label><br>
+      <input type="radio" id="masculino" name="sexo" value="masculino">
+      <label for="masculino">Masculino</label><br>
+      <input type="radio" id="feminino" name="sexo" value="feminino">
+      <label for="feminino">Feminino</label><br>
+      <input type="radio" id="prefiro" name="sexo" value="prefiro_nao_responder">
+      <label for="prefiro">Prefiro não responder</label>
+    </div>
+    <div class="form-group">
+      <label for="genero">Gênero:</label><br>
+      <input type="radio" id="masculino" name="genero" value="masculino">
+      <label for="masculino">Masculino</label><br>
+      <input type="radio" id="feminino" name="genero" value="feminino">
+      <label for="feminino">Feminino</label><br>
+      <!-- Adicione outras opções de gênero conforme necessário -->
+    </div>
+    <div class="form-group">
+      <label for="rg">R.G.:</label>
+      <input type="text" id="rg" name="rg" pattern="\d{10}" placeholder="Digite o R.G. do paciente" required>
+    </div>
+    <div class="form-group">
+      <label for="cns">CNS:</label>
+      <input type="text" id="cns" name="cns" pattern="\d{12}" placeholder="Digite o Cartão SUS do paciente" required>
+    </div>
+    <div class="form-group">
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" name="dataNascimento" required>
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="+55 (11) 99999-9999" required>
+    </div>
+    <div class="form-group">
+      <label for="nomeMae">Nome da Mãe:</label>
+      <input type="text" id="nomeMae" name="nomeMae" maxlength="50" placeholder="Digite o nome da mãe" required>
+    </div>
+    <div class="form-group">
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+    </div>
+    <div class="form-group">
+      <label for="numero">Número:</label>
+      <input type="text" id="numero" name="numero" pattern="\d{5}" placeholder="Número" required>
+    </div>
+    <div class="form-group">
+      <label for="complemento">Complemento:</label>
+      <input type="text" id="complemento" name="complemento" pattern="\d{5}" placeholder="Complemento" required>
+    </div>
+    <div class="form-group">
+      <label for="doenca">Doença:</label>
+      <select id="doenca" name="doenca">
+        <option value="nefrite">Nefrite</option>
+        <option value="conjutivite">Conjutivite</option>
+        <option value="renite">Renite</option>
+        <option value="asma">Asma</option>
+        <option value="tendinite">Tendinite</option>
+      </select>
+    </div>
+    <button type="reset">Limpar</button>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+</body>
+</html>
